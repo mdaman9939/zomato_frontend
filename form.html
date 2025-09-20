@@ -853,6 +853,13 @@
       });
     </script>
 
+    <script>
+      const token = localStorage.getItem("token");
+      if (!token) {
+        window.location.replace("signin.html"); // replace() reload page without back button
+      }
+    </script>
+
     <!-- Note: The error in main.js (line 68: getContext) suggests a missing canvas element for chart.js. -->
     <!-- If you don't need charts, remove <script src="lib/chart/chart.min.js"></script> from the HTML. -->
     <!-- Otherwise, add <canvas id="myChart"></canvas> where needed and ensure main.js references it correctly. -->
